@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+:root{
+    --spacing:20px;
+    --fontFam: 'Permanent Marker', static; 
+    --bg-gradient-primary:  rgb(132, 36, 4);
+    --bg-gradient-secondary:   rgb(26, 28, 33);
+    --bg-color:#010600;
+    --letter-color: bisque;
+    
+
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:var(--fontFam);
+    line-height: 1.1rem;
+}
+
+
+header{
+    width:100%;
+    height:150px;
+
+    display:grid;
+    place-items:center;
+    background-color: var(--bg-color);
+    border-radius:10px;
+    color: var(--letter-color);
+} 
+
+header h1{
+    font-size:2rem;
+    text-shadow:2px 2px  var(--bg-gradient-primary);
+    padding:var(--spacing);
+}
+
+body{
+    min-height: 100vh;
+}
+body, main{
+    background: linear-gradient(to right, var(--bg-gradient-secondary) ,var(--bg-gradient-primary));
+}
+
+.album-container{
+    max-width: 100%;
+    margin:40px 0;
+
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap:var(--spacing);
+    
+}
+
+.album-item{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    gap: var(--spacing);
+    padding:var(--spacing);
+}
+
+.album-item img{
+    width:90%;
+    height:auto;
+    margin:auto;
+
+    object-fit:cover;
+    object-position: center;
+    border-radius:10px;
+    transition: transform 1.5s ease-in-out;
+}
+.album-item img:hover{
+    transform:scale(1.25);
+    filter:drop-shadow(10px 10px 10px rgb(8, 18, 0));
+}
+
+.album-title{
+    color: var(--letter-color);
+}
+
+.album-description {
+  font-size: 0.9rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: var(--spacing);
+  border-radius: 10px;
+  box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.album-description:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--letter-color);
+}
+
+li{
+    list-style-type:none;
+}
+
+#footer{
+
+    width:100%;
+    height:150px;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+
+    bottom:0;
+    background-color: var(--bg-color);
+    color: var(--letter-color);
+    border-radius:10px;
+ } 
+
